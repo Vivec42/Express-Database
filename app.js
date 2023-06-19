@@ -13,6 +13,7 @@ const welcome = (req, res) => {
 app.get("/", welcome);
 
 const movieHandlers = require("./movieHandlers");
+const { hashPassword } = require("./auth.js");
 
 app.get("/api/movies", movieHandlers.getMovies);
 app.get("/api/movies/:id", movieHandlers.getMovieById);
@@ -24,6 +25,8 @@ app.get("/api/users/:id", movieHandlers.getUsersById);
 app.post("/api/users", movieHandlers.postUser);
 app.put("/api/users/:id", movieHandlers.updateUser);
 app.delete("/api/users/:id", movieHandlers.deleteUser);
+app.post("/api/users", hashPassword, movieHandlers.postUser);
+app.put("/api/users/:id", hashPassword, movieHandlers.updateUser);
 
 app.listen(port, (err) => {
   if (err) {

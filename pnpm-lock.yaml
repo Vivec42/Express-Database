@@ -1,6 +1,13 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
+  '@node-rs/argon2':
+    specifier: ^1.5.0
+    version: 1.5.0
   dotenv:
     specifier: ^16.0.3
     version: 16.0.3
@@ -17,6 +24,142 @@ devDependencies:
     version: 2.0.22
 
 packages:
+
+  /@node-rs/argon2-android-arm-eabi@1.5.0:
+    resolution: {integrity: sha512-TM/yKNxgpOWZ04fzqajGaZQH2rimyrMsnmEgwLaMKJQbvHKqUbGwnvoN4Ss/MrV7gUOSBJWq7atCYqVqvyYNYg==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-android-arm64@1.5.0:
+    resolution: {integrity: sha512-tPEGcRXRnN7TZfySjgOc9Thnv4lKJgxf0vgcS0cCttsBdNnL95YFRwfHHT04xAtK1zBA0+TnvjfNMJgagcRVNw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-darwin-arm64@1.5.0:
+    resolution: {integrity: sha512-1r5ehTsEbIx3Nh6YXYZ8o/GC7jeNsF4ADhLbTWvgV0JkPaJCZ0/ybwlJCQgnDvcJRRMxC6uHPqQt5jo0//ZYgg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-darwin-x64@1.5.0:
+    resolution: {integrity: sha512-iL5pxdjeCzR6y3Yed5JyUXs9nlErteYrEv5DDMSOzPe1au+uBX6qSxmMNpaQ0oC2bIWXc6JOokWMsLL0WbeL8w==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-freebsd-x64@1.5.0:
+    resolution: {integrity: sha512-eV4bf0/Ufpsd6cXVQExiQwbkNxT3Wold5Vj+VX+AhRtv1IGKtNDB3ajo8MbLcUK7jUKNgPYKJG6nWcPSOrZ/jw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-linux-arm-gnueabihf@1.5.0:
+    resolution: {integrity: sha512-exR+c1NkxBKcr9ht9YKZ3YK5ltUSOEB8+hF8O2UFBvkNwCcgslI1uysgUnT0fpz5AIEigFxSuUhlSIjXixC0YA==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-linux-arm64-gnu@1.5.0:
+    resolution: {integrity: sha512-bH5vg/JgUrJ08fD0su3wXG5RW4s2sa5uNb+kZfuEgUQHHBnB78BHQYrYxx1eWECedEZqjPwRKsadpNi1eFqWJg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-linux-arm64-musl@1.5.0:
+    resolution: {integrity: sha512-dCq0/3gTLDpySGm9YHCC5CC+iapAoeiynvfj9URMpT/wAOV9h04xX3zo0x+QOlkE3hblpylQZT8XbEmHr0OVpw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-linux-x64-gnu@1.5.0:
+    resolution: {integrity: sha512-Bi8y2hc0d0JCHMHPNRT7TXdEB/0Fw10l/JucB97ksHh2fpz1VLkkMLdgnow3P1cs2xD3cXIfuk3gj6aWtIXx+A==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-linux-x64-musl@1.5.0:
+    resolution: {integrity: sha512-ZOT8b2ht+zsG0QwJimcGNxzpPr3pXn1v+TgwI5p6OsyCClApzDA+Asv3wTczcuTdqgcXQjJzGZdt6TPb9m6t0g==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-win32-arm64-msvc@1.5.0:
+    resolution: {integrity: sha512-mVHTA4vr3XAGrw8DJtRnLWq6gasC7WTYf0xUDQ8Pa9wmWCcevU1zKtxrc3rsFVmc4nXX0rgBoSx45wntdjUSAw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-win32-ia32-msvc@1.5.0:
+    resolution: {integrity: sha512-QBTcEOT9bXMuL60Sz4Z7r3hwmp3zq2KXmx/3m96kF2KEFnofSkOyeZfgFDSIX0K+xZIiB+b95lcCGWwK56fHIg==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2-win32-x64-msvc@1.5.0:
+    resolution: {integrity: sha512-hsiIzZQ4d1Dokzx6vejhKB5RrJdACd488QQ0NWGsz5vl5sh1EwC1GQTEH9NAke7DnvxBgMXVZnPZADbv9ia5jQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/argon2@1.5.0:
+    resolution: {integrity: sha512-biTtXUTmh1toTjx75e2jyLZ5HGfWW9/zcRoXwHHY/nXVR5jxxsPPSGuOi1yo+bfaFNm2MQ/k9+1K7XbWCeTilg==}
+    engines: {node: '>= 10'}
+    optionalDependencies:
+      '@node-rs/argon2-android-arm-eabi': 1.5.0
+      '@node-rs/argon2-android-arm64': 1.5.0
+      '@node-rs/argon2-darwin-arm64': 1.5.0
+      '@node-rs/argon2-darwin-x64': 1.5.0
+      '@node-rs/argon2-freebsd-x64': 1.5.0
+      '@node-rs/argon2-linux-arm-gnueabihf': 1.5.0
+      '@node-rs/argon2-linux-arm64-gnu': 1.5.0
+      '@node-rs/argon2-linux-arm64-musl': 1.5.0
+      '@node-rs/argon2-linux-x64-gnu': 1.5.0
+      '@node-rs/argon2-linux-x64-musl': 1.5.0
+      '@node-rs/argon2-win32-arm64-msvc': 1.5.0
+      '@node-rs/argon2-win32-ia32-msvc': 1.5.0
+      '@node-rs/argon2-win32-x64-msvc': 1.5.0
+    dev: false
 
   /abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
