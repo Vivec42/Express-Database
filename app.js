@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-const port = process.env.APP_PORT ?? 5000;
+const port = process.env.APP_PORT || 5000;
 
 const welcome = (req, res) => {
   res.send("Welcome to my favourite movie list");
@@ -13,20 +13,25 @@ const welcome = (req, res) => {
 app.get("/", welcome);
 
 const movieHandlers = require("./movieHandlers");
-const { hashPassword } = require("./auth.js");
 
-app.get("/api/movies", movieHandlers.getMovies);
-app.get("/api/movies/:id", movieHandlers.getMovieById);
+const { hashPassword, verifyPassword, verifyToken } = require("./auth");
+
+app.post(
+  "/api/login",
+  movieHandlers.getUserByEmailWithPasswordAndPassToNext,
+  verifyPassword
+);
+app.post("/api/users", hashPassword, movieHandlers.postUser);
+
+app.use(verifyToken);
+
 app.post("/api/movies", movieHandlers.postMovie);
 app.put("/api/movies/:id", movieHandlers.updateMovie);
 app.delete("/api/movies/:id", movieHandlers.deleteMovie);
 app.get("/api/users", movieHandlers.getUsers);
 app.get("/api/users/:id", movieHandlers.getUsersById);
-app.post("/api/users", movieHandlers.postUser);
-app.put("/api/users/:id", movieHandlers.updateUser);
-app.delete("/api/users/:id", movieHandlers.deleteUser);
-app.post("/api/users", hashPassword, movieHandlers.postUser);
 app.put("/api/users/:id", hashPassword, movieHandlers.updateUser);
+app.delete("/api/users/:id", movieHandlers.deleteUser);
 
 app.listen(port, (err) => {
   if (err) {
